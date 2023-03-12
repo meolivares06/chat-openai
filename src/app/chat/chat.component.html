@@ -1,0 +1,15 @@
+<div class="chat-container">
+  <div class="chat-window">
+    <ng-container>
+      <div *ngFor="let message of messages" class="message">
+        <div class="message-text">{{ message.content }}</div>
+        <div class="message-time">{{ message.time | date:'hh:mm a' }}</div>
+      </div>
+      <div *ngIf="isLoading" class="loading">loading answer...</div>
+    </ng-container>
+  </div>
+  <div class="chat-input">
+    <input [(ngModel)]="inputText" placeholder="Type your message here...">
+    <button (click)="sendMessage()" [disabled]="isLoading">Send</button>
+  </div>
+</div>

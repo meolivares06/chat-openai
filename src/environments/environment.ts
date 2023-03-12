@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  openAIApiKey: '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',
+  openAIAPIUrl: 'https://api.openai.com/v1/chat/completions'
 };
 
 /*
